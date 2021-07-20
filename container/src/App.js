@@ -1,7 +1,10 @@
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
-import mount from 'marketing/MarketingApp';
+import MarketingApp from './components/MarketingApp';
 
-console.log(mount);
-
-export default () => <h1>Hi</h1>;
+export default () => (
+  <div>
+    <h1>Hi</h1>
+    <hr />
+    <MarketingApp />
+  </div>
+);
