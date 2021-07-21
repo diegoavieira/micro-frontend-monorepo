@@ -17,6 +17,6 @@
     "react/react-in-jsx-scope": "off",
     "no-console": "off",
     "react/prop-types": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": "off"
   }
 }
