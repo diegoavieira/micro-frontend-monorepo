@@ -7,10 +7,16 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
+  "resolutions": {
+    "webpack": "^5.4.0",
+    "license-webpack-plugin": "^2.3.17"
+  },
   "dependencies": {
+    "@angular-architects/module-federation": "12.4.0",
     "@angular/animations": "~11.2.14",
     "@angular/common": "~11.2.14",
     "@angular/compiler": "~11.2.14",
