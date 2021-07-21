@@ -5,6 +5,7 @@
     "pkief.material-icon-theme",
     "christian-kohler.path-intellisense",
     "eamodio.gitlens",
-    "donjayamanne.githistory"
+    "donjayamanne.githistory",
+    "octref.vetur"
   ]
 }
