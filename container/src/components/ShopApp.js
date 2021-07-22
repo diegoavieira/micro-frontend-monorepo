@@ -1,12 +1,5 @@
-import mount from 'shop/ShopApp';
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
-export default () => {
-  const ref = useRef(null);
+import('shop/ShopApp');
 
-  useEffect(() => {
-    mount(ref.current);
-  }, []);
-
-  return <div ref={ref} />;
-};
+export default () => <shop-root />;

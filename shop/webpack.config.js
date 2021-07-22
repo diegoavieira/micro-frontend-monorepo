@@ -2,6 +2,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
+const packageJson = require("./package.json");
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
@@ -12,8 +13,7 @@ const port = 8084;
 
 module.exports = {
   output: {
-    uniqueName: "shop",
-    publicPath: "auto",
+    publicPath: `http://localhost:${port}/`,
   },
   optimization: {
     runtimeChunk: false,
@@ -29,7 +29,7 @@ module.exports = {
       name: "shop",
       filename: "remoteEntry.js",
       exposes: {
-        "./ShopApp": ".//src/app/app.module.ts",
+        "./ShopApp": path.resolve(__dirname, "./src/bootstrap.ts"),
       },
 
       // For hosts (please adjust)
@@ -38,30 +38,7 @@ module.exports = {
 
       // },
 
-      shared: share({
-        "@angular/core": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: "auto",
-        },
-        "@angular/common": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: "auto",
-        },
-        "@angular/common/http": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: "auto",
-        },
-        "@angular/router": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: "auto",
-        },
-
-        ...sharedMappings.getDescriptors(),
-      }),
+      shared: packageJson.dependencies,
     }),
     sharedMappings.getPlugin(),
   ],

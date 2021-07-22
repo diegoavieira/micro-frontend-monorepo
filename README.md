@@ -36,6 +36,6 @@ npm start
 // Terminal #5 - Shop - Angular - http://localhost:8084
 
 cd shop
-yarn i
+yarn
 yarn start
 ```
