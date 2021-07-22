@@ -18,9 +18,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v2
-      - run: yarn install
-      - run: yarn run build
+      - uses: borales/actions-yarn@v2.0.0
+          with:
+            cmd: install
+
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build
 
       - name: AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
