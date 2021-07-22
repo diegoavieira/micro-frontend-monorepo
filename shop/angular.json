@@ -26,7 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "extraWebpackConfig": "config/webpack.prod.js",
+            "extraWebpackConfig": "config/webpack.dev.js",
             "commonChunk": false
           },
           "configurations": {
@@ -64,21 +64,19 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "shop:build",
-            "extraWebpackConfig": "config/webpack.dev.js",
-            "port": 8084
+            "extraWebpackConfig": "config/webpack.dev.js"
           },
           "configurations": {
             "production": {
               "browserTarget": "shop:build:production",
-              "extraWebpackConfig": "config/webpack.dev.js"
+              "extraWebpackConfig": "config/webpack.prod.js"
             }
           }
         },
         "extract-i18n": {
           "builder": "ngx-build-plus:extract-i18n",
           "options": {
-            "browserTarget": "shop:build",
-            "extraWebpackConfig": "config/webpack.prod.js"
+            "browserTarget": "shop:build"
           }
         },
         "test": {
@@ -91,7 +89,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "extraWebpackConfig": "config/webpack.prod.js"
+            "extraWebpackConfig": "config/webpack.dev.js"
           }
         },
         "lint": {

@@ -9,6 +9,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular-architects/module-federation-tools@^12.4.0":
+  version "12.4.0"
+  resolved "https://registry.yarnpkg.com/@angular-architects/module-federation-tools/-/module-federation-tools-12.4.0.tgz#a93bfefa914d4c6b6d7719ece13d016607a7850c"
+  integrity sha512-TXayD7G9yRnOY058lBLVXaesG0Ukp5OXkaa3fQcE61FJ8on+9OM54t6sDpdIeoCAyc3YuMC+Us2RHYefJF2pnw==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular-architects/module-federation@12.4.0":
   version "12.4.0"
   resolved "https://registry.yarnpkg.com/@angular-architects/module-federation/-/module-federation-12.4.0.tgz#cf360103faf4f3d9a122f756c65f3976e473bd1e"
