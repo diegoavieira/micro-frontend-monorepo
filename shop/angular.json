@@ -23,15 +23,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": [],
-            "extraWebpackConfig": "webpack.config.js",
+            "extraWebpackConfig": "config/webpack.prod.js",
             "commonChunk": false
           },
           "configurations": {
@@ -61,7 +56,7 @@
                   "maximumError": "10kb"
                 }
               ],
-              "extraWebpackConfig": "webpack.prod.config.js"
+              "extraWebpackConfig": "config/webpack.prod.js"
             }
           }
         },
@@ -69,13 +64,13 @@
           "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "shop:build",
-            "extraWebpackConfig": "webpack.config.js",
+            "extraWebpackConfig": "config/webpack.dev.js",
             "port": 8084
           },
           "configurations": {
             "production": {
               "browserTarget": "shop:build:production",
-              "extraWebpackConfig": "webpack.prod.config.js"
+              "extraWebpackConfig": "config/webpack.dev.js"
             }
           }
         },
@@ -83,7 +78,7 @@
           "builder": "ngx-build-plus:extract-i18n",
           "options": {
             "browserTarget": "shop:build",
-            "extraWebpackConfig": "webpack.config.js"
+            "extraWebpackConfig": "config/webpack.prod.js"
           }
         },
         "test": {
@@ -93,15 +88,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": [],
-            "extraWebpackConfig": "webpack.config.js"
+            "extraWebpackConfig": "config/webpack.prod.js"
           }
         },
         "lint": {
@@ -112,9 +102,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
