@@ -11,18 +11,18 @@ import { APP_BASE_HREF } from '@angular/common';
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: '/',
-    },
+      useValue: '/'
+    }
   ],
   bootstrap: [],
-  entryComponents: [AppComponent],
+  entryComponents: [AppComponent]
 })
 export class AppModule {
   constructor(private injector: Injector) {}
 
   ngDoBootstrap() {
     const customElement = createCustomElement(AppComponent, {
-      injector: this.injector,
+      injector: this.injector
     });
     customElements.define('shop-app', customElement);
   }

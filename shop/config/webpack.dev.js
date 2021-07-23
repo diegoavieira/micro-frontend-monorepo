@@ -1,17 +1,16 @@
-const { merge } = require("webpack-merge");
-const commonConfig = require("./webpack.common");
+const { merge } = require('webpack-merge');
+const commonConfig = require('./webpack.common');
 
 const port = 8084;
 
 const devConfig = {
-  mode: "development",
+  mode: 'development',
   output: {
-    publicPath: `http://localhost:${port}/`,
+    publicPath: `http://localhost:${port}/`
   },
   devServer: {
-    port,
-    historyApiFallback: true,
-  },
+    port
+  }
 };
 
 module.exports = merge(commonConfig, devConfig);

@@ -39,11 +39,3 @@ cd shop
 yarn install
 yarn start
 ```
-
-```
-// Terminal #5 - Ecommerce - Angular 12 - http://localhost:8085
-
-cd shop
-npm install
-npm start
-```
